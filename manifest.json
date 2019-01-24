@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "Slack Footer Spacing",
+    "version": "1.0",
+    "description": "Moves the messages and footer up higher for when I'm looking at slack with vertical monitors.",
+    "content_scripts": [ {
+        "matches": ["https://neadwerx.slack.com/messages/*"],
+        "js": ["content.js"]
+    } ]
+}
