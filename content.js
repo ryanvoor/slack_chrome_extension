@@ -1,11 +1,11 @@
 var checkPageLoadedYet = setInterval(
     function() {
         // when a slack channel is open
-        if ( typeof document.getElementsByTagName( 'footer' )[0] !== 'undefined' ) {
+        if ( typeof document.getElementsByClassName( 'p-message_pane_input' )[0] !== 'undefined' ) {
             // make sure we only do this when the slack window is really tall (like when I'm using vertical monitors)
             if ( document.getElementsByTagName( 'body' )[0].clientHeight > 1200 ) {
                 console.log( 'Putting extra space under the footer (place where you type messages) for ease of viewing on vertical monitors' );
-                document.getElementsByTagName( 'footer' )[0].style.marginBottom = '500px';
+                document.getElementsByClassName( 'p-message_pane_input' )[0].style.marginBottom = '500px';
             }
 
             // This not defunct because slack updated to include a dark theme
